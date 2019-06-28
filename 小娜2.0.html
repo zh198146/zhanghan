@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    while (true) {
+        var shu = prompt('请输入1或求和\n请输入2或时间获取当前时间\n输入3或笑话获取笑话')
+        if (shu == 'q') {
+            alert('退出');
+            break;
+        }
+        switch (shu) {
+            case '1':
+            case '求和':
+                var num = prompt('请输入用逗号隔开的数字');
+                var arr = num.split(',');
+                var guo = 0
+                for (i = 0; i < arr.length; i++) {
+                    guo += parseFloat(arr[i]);
+                }
+                alert('结果是'+guo);
+                break;
+
+
+            default:
+                alert('你的话小娜没有听懂')
+                break;
+        }
+
+
+
+    }
+
+</script>
+
+</html>

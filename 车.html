@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Car(ping, yan, jia, zhong) {
+
+        this.ping = ping;
+        this.yan = yan;
+        this.jia = jia;
+        this.zhong = zhong;
+        this.xi = function () {
+            console.log('直接熄火')
+        }
+        this.fa = function () {
+            console.log('2秒加速240/s')
+        }
+    }
+    var f1 = new Car('法拉利', '大红', '2400万', '一吨');
+    console.log(f1)
+    f1.xi();
+    f1.fa()
+
+</script>
+
+</html>

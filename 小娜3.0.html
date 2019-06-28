@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Xiaona() {
+        this.xun = function () {
+            var bai = prompt('请输入数字或关键字实现功能,输入q则退出\n1.求和\n2.时间\n3.笑话\n')
+            return bai;
+        }
+        // 求和
+        this.he = function () {
+            var num = prompt('请输入用逗号隔开的数字');
+            var arr = num.split(',');
+            var guo = 0
+            for (i = 0; i < arr.length; i++) {
+                guo += parseFloat(arr[i]);
+            }
+            alert('结果是' + guo);
+        }
+        // 时间
+        this.riqi = function () {
+            var date = new Date();
+            var y = date.getFullYear();
+            var M = date.getMonth() + 1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            M = M < 10 ? '0' + M : M;
+            d = d < 10 ? '0' + d : d;
+            h = h < 10 ? '0' + h : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            var time = y + '-' + M + '-' + d + ' ' + h + ':' + m + ':' + s;
+            alert(time);
+        }
+        // 笑话
+        this.xiao = function () {
+            var xiaos = ['笑话1', '笑话2', '笑话3', '笑话4', '笑话5', '笑话6'];
+            var index = Math.floor(Math.random() * xiaos.length);
+            alert(xiaos[index]);
+        }
+
+        this.mengbi = function () {
+            alert('我听不懂');
+        }
+    }
+
+
+
+
+
+
+    // 22222222222222小娜部分
+    var Xiaona = new Xiaona();
+    while (true) {
+        var bai = Xiaona.xun()
+        if (bai == 'Q') {
+            break;
+        }
+
+        switch (bai) {
+            case '1':
+            case '求和':
+                Xiaona.he();
+                break;
+            case '2':
+            case '时间':
+                Xiaona.riqi();
+                break;
+            case '3':
+            case '笑话':
+                Xiaona.xiao();
+                break;
+                // 输入其他
+            default:
+                Xiaona.mengbi();
+                break;
+
+        }
+    }
+
+</script>
+
+</html>

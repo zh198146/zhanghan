@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function xiaona() {
+        this.wen = function () {
+            var xun = prompt('请输入数字或关键字获得功能\n1.求和\n2.时间\n3.笑话\nq.退出');
+            return xun;
+        }
+        // 求和
+        this.he = function () {
+            var num = prompt('请输入数字用逗号隔开');
+            var arr = num.split(',');
+            var guo = 0;
+            for (i = 0; i < arr.length; i++) {
+                guo += parseFloat(arr[i]);
+            }
+            alert('结果是' + guo);
+            this.shi =function(){
+                var date =new Date()
+            }
+
+        }
+    }
+
+    // 小娜部分
+    var xiaona = new xiaona();
+    while (true) {
+        var ask = xiaona.wen();
+        if (ask == 'q') {
+            break;
+        }
+        switch (ask) {
+            case '1':
+            case '求和':
+                xiaona.he();
+                break;
+            // mm
+            case '2':
+            case '时间':
+                xiaona.shi();
+                break;
+
+            // jjj
+            case '3':
+            case '笑话':
+                xiaona.xiao();
+                break;
+            // wwf
+            default:
+                xiaona.meng();
+                break;
+
+
+
+
+        }
+    }
+</script>
+
+</html>
